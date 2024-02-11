@@ -1,0 +1,37 @@
+/*Roboto font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+/*Для отображения на телефонах*/
+@media (max-width:680px) {
+    .display_control{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #2E2E2E;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    background-color: #454545;
+}
+header>h1{
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+    padding-top: 6px;
+    background: linear-gradient(#ffe600 0%, #ff5c00 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
