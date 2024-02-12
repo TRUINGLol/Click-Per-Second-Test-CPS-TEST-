@@ -1,13 +1,23 @@
 /*Roboto font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
+/*grid для упорядывачивания элементов*/
+main{
+    display: grid;
+    grid-template-columns: 0.6fr 3fr 1fr;
+    gap: 5px;
+}
 /*Для отображения на телефонах*/
 @media (max-width:680px) {
-    .display_control{
+    main{
         display: flex;
         flex-direction: column;
     }
+    .about{
+        flex-direction: column;
+    }
 }
+
 
 *{
     margin: 0;
@@ -34,4 +44,8 @@ header>h1{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.about{
+    display: flex;
 }
