@@ -106,6 +106,42 @@ header>h1{
     color: #fff;
 }
 
+nav{
+    width: 400px;
+    height: 370px;
+    background-color: #1A1A1A;
+    border-radius: 20px;
+    margin-right: 50px;
+}
+nav>p{
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    margin-top: 15px;
+}
+.nav_ul{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 12px;
+    margin-left: 22px;
+}
+#b1s,#b2s,#b5s,#b10s,#b15s,#b30s,#b60s{
+    border-radius: 7px;
+    width: 356px;
+    height: 30px;
+    background-color: #5a5a5a;
+    border: none;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+#b1s:hover,#b2s:hover,#b5s:hover,#b10s:hover,#b15s:hover,#b30s:hover,#b60s:hover{
+    background-color: #333333;
+}
+
 /*Для отображения на телефонах*/
 @media (max-width:680px) {
     main{
