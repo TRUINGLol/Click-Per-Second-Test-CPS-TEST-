@@ -142,11 +142,31 @@ nav>p{
     background-color: #333333;
 }
 
+.main_playground{
+    text-align: center;
+    height: 370px;
+    max-width: 100%;
+    min-width: 300px;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 70px;
+    color: white;
+}
+.main_playground > p{
+    margin-top: 176px;
+    user-select: none;
+}
+
+
+
 /*Для отображения на телефонах*/
-@media (max-width:680px) {
+@media (max-width:1074px) {
     main{
         display: flex;
         flex-direction: column;
+
+        align-items: center;
     }
     .about{
         flex-direction: column;
@@ -161,5 +181,20 @@ nav>p{
     }
     .main_information_score{
         margin-top: 0;
+    }
+    .main_playground{
+        width: 560px;
+        margin: 0;
+    }
+    .display_control{
+        margin-top: 50px;
+    }
+    nav{
+        margin: 0;
+    }
+    .main_information{
+        box-sizing: content-box;
+        width: 100%;
+        justify-content: center;
     }
 }
