@@ -48,6 +48,7 @@ header>h1{
 }
 
 .main_information_timer{
+    margin-top: 30px;
     width: 180px;
     height: 56px;
     border-radius: 20px;
@@ -158,7 +159,29 @@ nav>p{
     user-select: none;
 }
 
-
+.about{
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.about_what{
+    width: 620px;
+    height: 370px;
+    margin-left: 50px;
+    background-color: #1A1A1A;
+    color: white;
+    box-shadow: 6px 5px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.about_how{
+    width: 620px;
+    height: 370px;
+    margin-left: 100px;
+    margin-right: 50px;
+    background-color: #1A1A1A;
+    color: white;
+    box-shadow: 6px 5px 4px 0 rgba(0, 0, 0, 0.25);
+}
 
 /*Для отображения на телефонах*/
 @media (max-width:1074px) {
@@ -191,10 +214,27 @@ nav>p{
     }
     nav{
         margin: 0;
+        margin-top: 20px;
     }
     .main_information{
         box-sizing: content-box;
         width: 100%;
         justify-content: center;
+    }
+    .main_information_timer{
+        margin-top: 0;
+    }
+    .about{
+        gap: 50px;
+    }
+    .about_how{
+        margin: 0 auto;
+        box-sizing: content-box;
+        width: 100%;
+    }
+    .about_what{
+        margin: 0 auto;
+        box-sizing: content-box;
+        width: 100%;
     }
 }
