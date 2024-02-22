@@ -163,27 +163,52 @@ nav>p{
     margin-top: 100px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    background-color: #261A1A;
+    margin-bottom: 0;
+    height: 500px;
 }
 .about_what{
-    width: 620px;
-    height: 370px;
+    width: auto;/*620*/
+    height: 412px;
     margin-left: 50px;
     background-color: #1A1A1A;
     color: white;
     box-shadow: 6px 5px 4px 0 rgba(0, 0, 0, 0.25);
 }
+.h{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+}
+.main_text{
+    margin-left: 10px;
+    width: auto;
+    margin-top: 10px;
+}
+.main_text_b{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
 .about_how{
-    width: 620px;
-    height: 370px;
+    min-width: 40%;
+    height: 412px;
     margin-left: 100px;
     margin-right: 50px;
     background-color: #1A1A1A;
     color: white;
     box-shadow: 6px 5px 4px 0 rgba(0, 0, 0, 0.25);
 }
+.main_text_b2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
 
-/*Для отображения на телефонах*/
+
+/*Для отображения на телефонах и планшетах*/
 @media (max-width:1074px) {
     main{
         display: flex;
@@ -231,10 +256,13 @@ nav>p{
         margin: 0 auto;
         box-sizing: content-box;
         width: 100%;
+        height: 420px;
     }
     .about_what{
         margin: 0 auto;
         box-sizing: content-box;
         width: 100%;
+        height: 420px;
+        margin-top: 100px;
     }
 }
