@@ -8,34 +8,35 @@
     <title>CPS TEST</title>
 </head>
 <body>
+    <script src="js/MainPlaygroundSystem.js"></script>
     <header><h1>CPS TEST</H1></header>
     <div class="display_control">
         <main>
             <div class="main_information">
                 <div class="main_information_timer">
-                    <p id="timer">0</p>
+                    <p id="timer">1</p>
                     <p class="timer">Timer</p>
                 </div>
                 <div class="main_information_clickS">
                     <p id="clicks">0</p>
-                    <p class="clicks">Click/s</p>
+                    <p class="clicks"><b>CPS</b></p>
                 </div>
                 <div class="main_information_score">
                     <p id="score">0</p>
                     <p class="score">Score</p>
                 </div>
             </div>
-            <div class="main_playground"><p>Click to Start</p></div>
+            <div class="main_playground" onclick="Game_Start(this)"><p id="hint">Click to Start</p></div>
             <nav>
-                <p>Select Timer</p>
+                <p>Select Timer (sec)</p>
                 <ul class="nav_ul">
-                    <li class="nav_li"><button href="#" id="b1s">1 s</button></li>
-                    <li class="nav_li"><button id="b2s">2 s</button></li>
-                    <li class="nav_li"><button id="b5s">5 s</button></li>
-                    <li class="nav_li"><button id="b10s">10 s</button></li>
-                    <li class="nav_li"><button id="b15s">15 s</button></li>
-                    <li class="nav_li"><button id="b30s">30 s</button></li>
-                    <li class="nav_li"><button id="b60s">60 s</button></li>
+                    <li class="nav_li"><button href="#" id="b1s" onclick="SelectTimer(this)">1</button></li>
+                    <li class="nav_li"><button id="b2s" onclick="SelectTimer(this)">2</button></li>
+                    <li class="nav_li"><button id="b5s" onclick="SelectTimer(this)">5</button></li>
+                    <li class="nav_li"><button id="b10s" onclick="SelectTimer(this)">10</button></li>
+                    <li class="nav_li"><button id="b15s" onclick="SelectTimer(this)">15</button></li>
+                    <li class="nav_li"><button id="b30s" onclick="SelectTimer(this)">30</button></li>
+                    <li class="nav_li"><button id="b60s" onclick="SelectTimer(this)">60</button></li>
                 </ul>
             </nav>
         </main>

@@ -158,6 +158,9 @@ nav>p{
     margin-top: 176px;
     user-select: none;
 }
+.main_playground:hover{
+    cursor: pointer;
+}
 
 .about{
     margin-top: 100px;
