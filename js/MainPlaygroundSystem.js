@@ -20,6 +20,9 @@ window.onload = function(){
 
 //Выбор времени
 function SelectTimer(button_Select){
+    if(isPlay){
+        return;
+    }
     SELECTED = Number(button_Select.innerHTML);
     timer = Number(button_Select.innerHTML);
     timer_Show.innerHTML = timer;
@@ -28,7 +31,7 @@ function SelectTimer(button_Select){
 
 
 //Начало игры
-function Game_Start(Playground){
+function Game_Start(){
     if(!isPlay){
         isPlay= true;
         Game();
@@ -51,14 +54,14 @@ function Game(){
 
         if(timer<=0){
             clearInterval(main);
+            hint.display = "block";
             CPS_n =CPS();
             CPS_n_Show.innerHTML = CPS_n;
             isPlay = false;
             score = -1;
-            hint.display = "block";
-            alert("Ваш CPS за "+SELECTED+" времени ="+CPS_n);
         }
     },1000)
+    
 }
 
 //Высчитывает cps за игру
@@ -67,5 +70,4 @@ function CPS(){
 }
 
 //Убрать баги
-//1. убрать возможность менять время во время игры
 //2. убрать возможность запуска игры сразу после вывода ALERT
