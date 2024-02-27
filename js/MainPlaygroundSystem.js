@@ -65,7 +65,6 @@ function Game(obj){
             if(a || !a){
                 setTimeout(function(){
                     obj.onclick = function(){Game_Start(obj)};
-                    console.log("a");
                 }, 500)
             }
         }
