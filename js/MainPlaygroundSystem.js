@@ -20,31 +20,30 @@ window.onload = function(){
 
 //Выбор времени
 function SelectTimer(button_Select){
-    if(isPlay){
-        return;
+    if(!isPlay){
+        SELECTED = Number(button_Select.innerHTML);
+        timer = Number(button_Select.innerHTML);
+        timer_Show.innerHTML = timer;
+        console.log("Select time:"+timer);
     }
-    SELECTED = Number(button_Select.innerHTML);
-    timer = Number(button_Select.innerHTML);
-    timer_Show.innerHTML = timer;
-    console.log("Select time:"+timer);
 }
 
 
 //Начало игры
-function Game_Start(){
+function Game_Start(OBJ){
     if(!isPlay){
         isPlay= true;
-        Game();
+        Game(OBJ);
     }
     if(isPlay){
+        hint.display = "none";
         score++;
         score_Show.innerHTML = score;
     }
-    hint.display = "none";
 }
 
 //Основная логика игры
-function Game(){
+function Game(obj){
     timer = SELECTED;
     timer_Show.innerHTML = timer;
     CPS_n_Show.innerHTML = 0;
@@ -53,21 +52,27 @@ function Game(){
         timer_Show.innerHTML = timer;
 
         if(timer<=0){
+            obj.onclick = null;
             clearInterval(main);
             hint.display = "block";
             CPS_n =CPS();
             CPS_n_Show.innerHTML = CPS_n;
             isPlay = false;
             score = -1;
+
+            //зарефакторить это уебище
+            let a = confirm("Z");
+            if(a || !a){
+                setTimeout(function(){
+                    obj.onclick = function(){Game_Start(obj)};
+                    console.log("a");
+                }, 500)
+            }
         }
     },1000)
-    
 }
 
 //Высчитывает cps за игру
 function CPS(){
     return score/SELECTED;
 }
-
-//Убрать баги
-//2. убрать возможность запуска игры сразу после вывода ALERT
