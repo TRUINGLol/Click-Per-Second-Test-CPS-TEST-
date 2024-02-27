@@ -61,7 +61,7 @@ function Game(obj){
             score = -1;
 
             //зарефакторить это уебище
-            let a = confirm("Z");
+            let a = confirm(`Your cps for ${SELECTED} seconds is:${CPS_n}`);
             if(a || !a){
                 setTimeout(function(){
                     obj.onclick = function(){Game_Start(obj)};
